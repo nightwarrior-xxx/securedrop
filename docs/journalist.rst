@@ -180,31 +180,66 @@ and save them all at once by clicking **Download Selected**.
 
 |Load external content|
 
-A dialog box will appear asking if you want to **Open** or **Save**
-the file. Select **Save File**:
+The following screenshot shows the save dialog, with the two folders highlighted
+in red:
+
+A dialog box with two choices will appear, **Cancel** and **Save file**:
 
 |Download selected|
 
-In order to protect you from malware, the browser in Tails will only
-allow you to download documents to a special persistent folder located
-at ``/home/amnesia/Tor Browser``.
+Click **Save file**. In the save dialog, select one
+of the two folders highlighted in red in the screenshot below:
 
 |Download to sandbox folder|
 
-.. tip:: The special folder mentioned here is called **Tor Browser**,
-         not "Persistent." Attempting to download directly into the
-         **Persistent** folder will only lead to frustration.
+The difference between these two folders is as follows:
 
-Once downloaded to this folder, move the document to the designated
+- **Tor Browser**. Downloads saved to this folder will be stored in memory,
+  which means that they will only be available for the duration of your current
+  Tails session. In the screenshot, this is the currently selected folder.
+  The full path to this folder is ``/home/amnesia/Tor Browser``.
+
+- **Tor Browser (persistent)**: Note that the name may be shown in truncated
+  form, as seen in the screenshot. Downloads saved to this folder will be stored
+  on your Tails USB drive in the special persistent volume that is only
+  available if you have unlocked it on the welcome screen. The full path to this
+  folder is ``/home/amnesia/Persistent/Tor Browser``.
+
+Unless you have reason to store encrypted submissions on the
+*Journalist Workstation*, we recommend using the non-persistent "Tor Browser"
+folder. In the recommended process, you will now move the submission to the
+*Secure Viewing Station*, and there is no need to leave a persistent copy
+behind.
+
+.. important:: Attempting to download files to any other folder will fail.
+  Tails only permits the browser to access these two folders, so that
+  even if your browser is compromised by malware, attackers cannot easily gain
+  access to other data stored on the same computer.
+
+  See the Tails guide to `Browsing the web with Tor Browser <https://tails.boum.org/doc/anonymous_internet/Tor_Browser/index.en.html>`__
+  for more information.
+
+
+Once downloaded to either folder, move the document to the designated
 USB stick you intend to use to transfer the documents from your
 *Journalist Workstation* to the *Secure Viewing Station*. This storage
-device will be known as your *Transfer Device*.
+device is known as your *Transfer Device*.
+
+You can drag and drop the file, as shown in the screenshot sequence below.
+This will leave a redundant copy behind in the Tor Browser folder. If you have
+downloaded the file to the non-persistent "Tor Browser" folder (as recommended),
+the redundant copy will disappear at the end of your session.
 
 |Move to transfer device 1|
 
 |Move to transfer device 2|
 
-Eject the *Transfer Device* from the *Journalist Workstation*.
+|Move to transfer device 3|
+
+Eject the *Transfer Device* by clicking the "Eject" icon next to its name in the
+file manager. Wait for this operation to complete (the "Eject" icon will
+disappear), then unplug the *Transfer Device*. Ejecting the drive in this manner
+ensures that all write operations are completed before you unplug the drive.
 
 Next, boot up the *Secure Viewing Station* using Tails and enter the
 passphrase for the *Secure Viewing Station* persistent volume. Once you
@@ -401,6 +436,7 @@ audio, and begin publishing important, high-impact work!
 .. |Download to sandbox folder| image:: images/manual/tbb_Document6.png
 .. |Move to transfer device 1| image:: images/manual/tbb_Document7.png
 .. |Move to transfer device 2| image:: images/manual/tbb_Document8.png
+.. |Move to transfer device 3| image:: images/manual/tbb_Document9.png
 .. |Copy files to persistent| image:: images/manual/viewing1.png
 .. |Decrypting| image:: images/manual/viewing2.png
 .. |Decrypted documents| image:: images/manual/viewing3.png

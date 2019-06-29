@@ -1,4 +1,4 @@
-For SecureDrop workstation updates, beginning with SecureDrop 0.7,
+For SecureDrop workstation updates, beginning with SecureDrop 0.7.0,
 your workstation will automatically check for updates on boot. An update
 window will pop up when updates are needed, and you should simply follow the prompts
 in the updater to perform the update.
