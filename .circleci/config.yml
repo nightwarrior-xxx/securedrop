@@ -131,7 +131,7 @@ jobs:
     environment:
       DOCKER_API_VERSION: 1.23
       BASE_OS: xenial
-    parallelism: 3
+    parallelism: 5
     steps:
       - checkout
       - *rebaseontarget
@@ -169,7 +169,7 @@ jobs:
       DOCKER_API_VERSION: 1.23
       BASE_OS: xenial
       PYTHON_VERSION: 3
-    parallelism: 3
+    parallelism: 5
     steps:
       - checkout
       - *rebaseontarget
